@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{% block title %}{% endblock %} | Nescius</title>
+  <!--STYLESHEET-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <!--FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet" />
+  <!--ICONS-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/1e841d8fcf.js" crossorigin="anonymous"></script>
+  <!--FAVICON-->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}" />
+  <link rel="manifest" href="{{url_for('static', filename='site.webmanifest')}}" />
+  <link rel="mask-icon" href="{{url_for('static', filename='safari-pinned-tab.svg')}}" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Nescius | {{pageName}}" />
+  <meta name="description"
+    content="Potřebujete rychle a levně jednoduchou webovku a nevíte jak na to? Tak to jste na správném místě. Jednoduchý a elegantní web - zdarma!" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{pageUrl}}" />
+  <meta property="og:title" content="Nescius | {{pageName}}" />
+  <meta property="og:description"
+    content="Potřebujete rychle a levně jednoduchou webovku a nevíte jak na to? Tak to jste na správném místě. Jednoduchý a elegantní web - zdarma!" />
+  <meta property="og:image" content="media/preview.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="{{pageUrl}}" />
+  <meta property="twitter:title" content="Nescius | {{pageName}}" />
+  <meta property="twitter:description"
+    content="Potřebujete rychle a levně jednoduchou webovku a nevíte jak na to? Tak to jste na správném místě. Jednoduchý a elegantní web - zdarma!" />
+  <meta property="twitter:image" content="media/preview.png" />
+  <!--RichSnippets-->
+  <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "url": "{{pageUrl}}",
+        "logo": nescius.chytrak.cz/logo.png"
+      }
+    </script>
+</head>
+
+<body>
+  <header class="head-nav">
+    <nav>
+      <h2 class="nav-btn code-animation">
+        <a href="{{Url}}">Home</a>
+      </h2>
+      <h2 class="nav-btn code-animation">
+        <a href="/projects">Projects</a>
+      </h2>
+    </nav>
+  </header>
+  {% block body %}
+  {% endblock %}
+  <footer>
+    <p>
+      <i class="fa-solid fa-copyright"></i> 2021 - 2022
+      https://www.foglar.github.io
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+    new Crate({
+      server: '864534986602446878',
+      channel: '909025554789961748',
+    })
+  </script>
+</body>
+
+</html>

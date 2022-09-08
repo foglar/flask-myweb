@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+<!--?VARIABLES-->
+{% set pageName = 'Solar system' %}
+{% set pageUrl = 'foglar.github.io' %}
+{% set Url = 'http://127.0.0.1/' %}
+{% set pageUrl = Url + '/solar-system.html' %}
+{% set image = "https://foglar.github.io/images/" %}
+
+{% block title %}
+Solar system
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='solar-sys.css') }}">
+<main>
+    <div class="first">
+      <h1 class="first">Solar system</h1>
+      <h3>Try to zoom out and in to see details.</h3>
+    </div>
+    <div class="sun">
+      <div id="mercury" class="solar-params planet-mercur"></div>
+      <div class="solar-params planet-venus"></div>
+      <div class="solar-params planet-earth"></div>
+      <div class="solar-params planet-mars"></div>
+      <div class="solar-params planet-jupiter"></div>
+      <div class="solar-params planet-saturn"></div>
+      <div class="solar-params planet-uran"></div>
+      <div class="solar-params planet-neptun"></div>
+    </div>
+  </main>
+  {% endblock %}

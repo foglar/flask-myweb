@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<!--?VARIABLES-->
+{% set pageName = Projects %}
+{% set pageUrl = 'foglar.github.io' %}
+{% set Url = 'http://127.0.0.1/' %}
+{% set pageUrl = Url + '/projects.html' %}
+{% set image = "https://foglar.github.io/images/" %}
+
+{% block title %}
+Projects
+{% endblock %}
+
+{% block body %}
+<main>
+    <article>
+    <h1>Projects</h1>
+    <h2><i class="fa-solid fa-pen-nib"></i> Devchallenges</h2>
+    <ul>
+        <li>
+            <a href="https://foglar.github.io/my-team-page-devchallenge/">My team page</a>
+        </li>
+        <li>
+            <a href="https://foglar.github.io/interior-consultant-devchallenge/">Interior consultant</a>
+        </li>
+        <li>
+            <a href="https://foglar.github.io/404-not-found-devchallenge/">404 not found</a>
+        </li>
+    </ul>
+    <h2><i class="fa-solid fa-school"></i> School</h2>
+    <ul>
+        <li><a href="{{ Url + '/projects/solar-sys' }}">Solar system simulation</a></li>
+    </ul>
+    </article>
+</main>
+{% endblock %}
